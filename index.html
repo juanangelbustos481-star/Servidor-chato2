@@ -4,15 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Servidor en la Nube</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(20, 25, 40, 0.85);
+            border: 2px solid #00e5ff;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 42, 95, 0.6);
+            text-align: center;
+        }
+
+        p.subtitle {
+            color: #a0aec0;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .file-list {
+            list-style: none;
+        }
+
+        .file-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .file-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ff2a5f;
+            transform: translateX(5px);
+        }
+
+        .file-item a {
+            color: #00e5ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .file-item a:hover {
+            text-decoration: underline;
+        }
+
+        .badge {
+            background: #ff2a5f;
+            color: white;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9kt;
+            color: #718096;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>¡Mi servidor en Render está online! 🚀</h1>
-        <p>Página web alojada gratuitamente en la nube mediante Render y GitHub.</p>
-        <button id="btn">Haz clic aquí</button>
-        <p id="mensaje"></p>
+        <h1>📂 Mis Archivos en el Servidor</h1>
+        <p class="subtitle">Lista de contenido alojado en mi nube de Render y GitHub</p>
+
+        <ul class="file-list">
+            <!-- EJEMPLO 1: Archivo HTML -->
+            <li class="file-item">
+                <a href="index.html" target="_blank">Página Principal (index.html)</a>
+                <span class="badge">Web</span>
+            </li>
+
+            <!-- EJEMPLO 2: Una imagen que hayas subido (cambia 'imagen.jpg' por el nombre real de tu foto) -->
+            <li class="file-item">
+                <a href="imagen.jpg" target="_blank">Ver mi imagen subida</a>
+                <span class="badge">Imagen</span>
+            </li>
+
+            <!-- Puedes agregar más líneas aquí conforme subas más archivos -->
+        </ul>
     </div>
-    <script src="script.js"></script>
+
+    <div class="footer">
+        ⚡ Servidor sincronizado automáticamente con GitHub
+    </div>
+
 </body>
 </html>
