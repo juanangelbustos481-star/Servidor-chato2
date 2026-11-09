@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Servidor en la Nube</title>
+    <title>Mi Servidor Anime - Contenido</title>
     <style>
         * {
             margin: 0;
@@ -24,7 +24,7 @@
 
         .container {
             width: 100%;
-            max-width: 700px;
+            max-width: 800px;
             background: rgba(20, 25, 40, 0.85);
             border: 2px solid #00e5ff;
             border-radius: 16px;
@@ -48,33 +48,64 @@
             font-size: 1rem;
         }
 
+        h2 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
+            color: #00e5ff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+
+        /* Estilo para la galería de imágenes */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .image-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .image-card span {
+            font-size: 0.9rem;
+            color: #ff708f;
+        }
+
+        /* Estilo para la lista de archivos */
         .file-list {
             list-style: none;
         }
 
         .file-item {
             background: rgba(255, 255, 255, 0.05);
-            margin-bottom: 12px;
-            padding: 15px 20px;
+            margin-bottom: 10px;
+            padding: 12px 15px;
             border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .file-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #ff2a5f;
-            transform: translateX(5px);
         }
 
         .file-item a {
             color: #00e5ff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
         }
 
         .file-item a:hover {
@@ -84,16 +115,16 @@
         .badge {
             background: #ff2a5f;
             color: white;
-            padding: 4px 10px;
-            font-size: 12px;
-            border-radius: 12px;
+            padding: 3px 8px;
+            font-size: 11px;
+            border-radius: 10px;
             text-transform: uppercase;
         }
 
         .footer {
             margin-top: 30px;
             text-align: center;
-            font-size: 0.9kt;
+            font-size: 0.85rem;
             color: #718096;
         }
     </style>
@@ -101,29 +132,39 @@
 <body>
 
     <div class="container">
-        <h1>📂 Mis Archivos en el Servidor</h1>
-        <p class="subtitle">Lista de contenido alojado en mi nube de Render y GitHub</p>
+        <h1>🌐 Mi Servidor en la Nube</h1>
+        <p class="subtitle">Contenido sincronizado desde GitHub</p>
 
+        <!-- SECCIÓN 1: IMÁGENES QUE SUBAS -->
+        <h2>🖼️ Mis Imágenes</h2>
+        <div class="image-gallery">
+            <!-- Cambia 'tu-imagen.jpg' por el nombre exacto de la foto que subiste a GitHub -->
+            <div class="image-card">
+                <img src="tu-imagen.jpg" alt="Mi imagen">
+                <span>tu-imagen.jpg</span>
+            </div>
+            <!-- Si subes más imágenes, puedes copiar y pegar otro bloque como este aquí abajo -->
+        </div>
+
+        <!-- SECCIÓN 2: OTROS ARCHIVOS -->
+        <h2>📂 Otros Archivos</h2>
         <ul class="file-list">
-            <!-- EJEMPLO 1: Archivo HTML -->
             <li class="file-item">
-                <a href="index.html" target="_blank">Página Principal (index.html)</a>
+                <a href="index.html" target="_blank">index.html</a>
                 <span class="badge">Web</span>
             </li>
-
-            <!-- EJEMPLO 2: Una imagen que hayas subido (cambia 'imagen.jpg' por el nombre real de tu foto) -->
+            <!-- Cambia 'documento.txt' por el nombre de cualquier otro archivo que subas -->
             <li class="file-item">
-                <a href="imagen.jpg" target="_blank">Ver mi imagen subida</a>
-                <span class="badge">Imagen</span>
+                <a href="documento.txt" target="_blank">documento.txt</a>
+                <span class="badge">Archivo</span>
             </li>
-
-            <!-- Puedes agregar más líneas aquí conforme subas más archivos -->
         </ul>
     </div>
 
     <div class="footer">
-        ⚡ Servidor sincronizado automáticamente con GitHub
+        ⚡ Actualizado automáticamente mediante Render y GitHub
     </div>
 
 </body>
 </html>
+
